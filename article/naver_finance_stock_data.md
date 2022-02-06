@@ -1,3 +1,5 @@
+# 네이버 금융 과거 주가 데이터 크롤링
+
 ### 데이터 소스
 파이썬으로 주가 데이터를 사용하려 할 때 [yfinance](https://pypi.org/project/yfinance/)나 [financeDataReader](https://github.com/financedata/financedatareader)와 같은 좋은 패키지를 사용하면 간단하게 주가 데이터를 불러올 수 있다. 하지만 이번 포스팅에선 간단하게 [네이버 금융](https://finance.naver.com/)에서 직접 주가 데이터를 불러와 보고자 한다. 재밌으니깐 ㅎㅎ
 
