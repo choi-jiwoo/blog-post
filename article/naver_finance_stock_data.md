@@ -1,16 +1,12 @@
-# 네이버 금융에서 주가 데이터 불러오기
-
 ### 데이터 소스
 파이썬으로 주가 데이터를 사용하려 할 때 [yfinance](https://pypi.org/project/yfinance/)나 [financeDataReader](https://github.com/financedata/financedatareader)와 같은 좋은 패키지를 사용하면 간단하게 주가 데이터를 불러올 수 있다. 하지만 이번 포스팅에선 간단하게 [네이버 금융](https://finance.naver.com/)에서 직접 주가 데이터를 불러와 보고자 한다. 재밌으니깐 ㅎㅎ
 
-### 
+### Let's have a look
 네이버 금융에 접속한 후 검색창에서 삼성전자를 검색하고 결과 페이지에서 '차트' 탭을 누르면 [삼성전자의 주가 차트](https://finance.naver.com/item/fchart.naver?code=005930)를 볼 수 있다. ~~*제발 가즈아!*~~
-
 
 ![005930](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hf543z4kctt5jew92wnk.png)
 
 여기서 크롬으로 **개발자 도구**를 열고 **네트워크**에서 `Fetch/XHR`을 누르면 브라우저가 서버와 실시간으로 주고 받은 데이터들을 확인할 수 있다. 주가 차트가 다 불러와진 상태에서는 불러온 데이터를 볼 수 없으므로 **개발자 도구**를 열어둔 상태에서 새로고침을 해보면 뭔가 줄줄이 생기는걸 볼 수 있다.
-
 
 ![network](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y8n79orj8u21wqe6wr77.png)
 
@@ -47,16 +43,16 @@ print(res)  # or print(res.status_code)
 print(res.text)
 ```
 
-
 ![res.text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k0hx2y1lwzgl230r4zco.png)
 
 응답 받은 데이터를 쓸만한 데이터로 만들으려면 추가적으로 전처리 과정이 필요하다.
 
 ### Cleaning time
-먼저 응답 받은 데이터를 문자열에서 데이터프레임으로 변환해 주었다.
+먼저 응답 받은 문자열 데이터에서 구두점들을 제거해주고 데이터프레임으로 변환해 주었다.
 
 ```python
-stock = ast.literal_eval(res.text.strip())
+data = res.text.strip()
+stock = ast.literal_eval(data)  # 문자열을 배열로 변환
 stock = pd.DataFrame(stock, columns=stock[0])
 stock.drop(0, inplace=True)
 ```
@@ -68,9 +64,10 @@ stock[ohlcv] = stock[ohlcv].apply(pd.to_numeric)
 stock['외국인소진율'] = stock['외국인소진율'].astype('float64')
 ```
 
-### Ta-da
-
+### Result
 
 ![df](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tl7f1p0vhckkwpeq6ayv.png)
+
+### Closing words
 
 이렇게 불러온 주가 데이터는 실시간 데이터가 아니기 때문에 트레이딩에 사용하기에는 적합하지 않고 시계열 분석이나 백테스팅 목적으로 사용할 수 있을것이다. 그리고 비공식적인 방법으로 데이터를 불러오는 것이기 때문에 개인적인 목적 외에 사용하는 것은 권장하지 않는다.
