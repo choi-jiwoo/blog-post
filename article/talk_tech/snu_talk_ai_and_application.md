@@ -1,6 +1,6 @@
 # AI 기술의 본질과 산업에의 응용
 
-!youtube[mkpD-at6a8g]
+[Watch On Youtube](https://youtu.be/mkpD-at6a8g)
 
 ### Core AI vs X+AI
 **Core AI**
