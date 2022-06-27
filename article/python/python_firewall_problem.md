@@ -2,7 +2,7 @@
 
 <img width="261" alt="1" src="https://velog.velcdn.com/images/choi-jiwoo/post/02b5c595-06ff-4216-8ebe-f44c9300e9f2/image.png">
 
-### Problem
+## 문제의 시작...
 맥에서 [Streamlit](https://streamlit.io/)을 사용하여 웹앱을 만들고있는데 `streamlit run app.py` 명령어를 칠 때마다 위 사진과 같은 경고창이 뜬다.
 
 매번 '허용' 눌러주기가 귀찮아서 해결방법을 인터넷에 찾아보았다.
@@ -11,7 +11,7 @@
 
 Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프로그램이니까 접근방식은 똑같았다.
 
-### Let's start!
+## Let's do it
 
 우선 왜 이런 경고창이 계속 뜨는지 알아보자.
 
@@ -75,15 +75,15 @@ Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프�
 
 <img width="617" alt="13" src="https://velog.velcdn.com/images/choi-jiwoo/post/91a88323-5c2c-46b3-a317-4e5d3acce6ba/image.png">
 
-### Result
+## Result
 
 이제 streamlit 앱을 실행시키면 마지막으로 한번 경고창이 뜨고 그 이후에는 다시 뜨지 않는다!
 
-### Closing words
+## Closing words
 
 아직 배우는 입장에서 개발의 세계는 참 넓다..
 
-### Reference
+## Reference
 
 - [Do you want the application to accept incoming network connections?](https://web.archive.org/web/20140228153242/http://silvanolte.com/blog/2011/01/18/do-you-want-the-application-to-accept-incoming-network-connections)
 - ['Do you want the application "main" to accept incoming network connections?' pop up while running Go applications](https://apple.stackexchange.com/questions/393715/do-you-want-the-application-main-to-accept-incoming-network-connections-pop)

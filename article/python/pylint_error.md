@@ -1,6 +1,6 @@
 # VS Code pylint unable to import 문제 해결
 
-### 문제의 시작...
+## 문제의 시작...
 
 VS Code에서 python에 사용할 linter로 pylint를 설정 해주었는데 아래 사진과 같은 import error 가 발생했다. 
 
@@ -12,7 +12,7 @@ VS Code에서 python에 사용할 linter로 pylint를 설정 해주었는데 아
 
 그럼 문제를 알았으니 해결해보자.
 
-### Let's do it
+## Let's Do It
 
 pylint에 `init-hook`을 설정해주면 되는데 이게 뭘까 찾아보았다. 구글링을 해보는데 Import error에 대한 해결 방법으로 `init-hook`을 설정해주면 된다라는 내용은 많이 있었는데 구체적인 내용은 찾기가 힘들었다. 
 
@@ -36,7 +36,7 @@ pylint에 `init-hook`을 설정해주면 되는데 이게 뭘까 찾아보았다
 
 이제 import error가 보이지 않는다!
 
-### One more thing...
+## One More Thing...
 
 PEP 328에 따르면 모듈은 절대경로를 사용하여 import를 해야 한다고 명시하고 있다. 그 이유로 파이썬의 라이브러리가 확장되고 여러 패키지들이 소개되면서 같은 이름의 모듈이 생겨나게 되었고 그냥 `import foo`를 하게 되면 이게 어떤 foo를 말하는 것인지 알기 어려워지는 상황이 되었기 때문이다. 
 
@@ -56,7 +56,7 @@ from 패키지 import 모듈
 
 하지만 이렇게 하면 `python 패키지/모듈.py` 방식으로 파이썬을 실행하면 `ModuleNotFoundError: No module named '모듈'` 이라는 에러 메세지를 받게 될것이다. python 실행시 패키지 디렉터리를 sys.path 제일 첫번째에 (`sys.path[0]`) 지정하게 되기 때문에 이미 그 패키지 디렉터리 안에 들어와 있는 상황이니 해당 패키지를 찾을 수 없는 것이다. 따라서 파이썬 실행을 `python -m 패키지.모듈` 방식으로 해주어야 한다.
 
-### Reference
+## Reference
 
 - [PEP 328 – Imports: Multi-Line and Absolute/Relative](https://www.python.org/dev/peps/pep-0328/)
 - [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#s2.2-imports)
