@@ -1,6 +1,6 @@
 # 'python' 응용프로그램이 들어오는 네트워크 연결을 허락하도록 하겠습니까?
 
-<img width="261" alt="1" src="https://user-images.githubusercontent.com/47313851/172755933-a55473b6-8cbc-4610-9bfd-51de99a839be.png">
+<img width="261" alt="1" src="https://velog.velcdn.com/images/choi-jiwoo/post/02b5c595-06ff-4216-8ebe-f44c9300e9f2/image.png">
 
 ### Problem
 맥에서 [Streamlit](https://streamlit.io/)을 사용하여 웹앱을 만들고있는데 `streamlit run app.py` 명령어를 칠 때마다 위 사진과 같은 경고창이 뜬다.
@@ -23,29 +23,31 @@ Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프�
 
 #### '키체인 접근' > 인증서 지원 > 인증서 생성
 
-<img width="1440" alt="2" src="https://user-images.githubusercontent.com/47313851/172791228-a5ca73c4-f312-47e9-877b-92a8e81cecca.png">
+<img width="617" alt="2" src="https://velog.velcdn.com/images/choi-jiwoo/post/2a4367b9-5123-47bd-9b72-5e6d1ddb2f35/image.png">
 
-<img width="516" alt="3" src="https://user-images.githubusercontent.com/47313851/172791245-4d5980a4-11bc-4270-aa4d-477e87140a66.png">
+
+<img width="617" alt="3" src="https://velog.velcdn.com/images/choi-jiwoo/post/a98216e8-a686-4798-a24a-ca894a33cf14/image.png">
+
 
 #### 인증서 생성 정보
 
-<img width="617" alt="4" src="https://user-images.githubusercontent.com/47313851/172791273-e80da8d6-daef-4c4c-8127-99e0b76a1991.png">
+<img width="617" alt="4" src="https://velog.velcdn.com/images/choi-jiwoo/post/c132dd63-cdd3-46c3-b8de-588181e040b6/image.png">
 
 이름은 아무거나 원하는걸로 설정해주자.
 
-<img width="616" alt="5" src="https://user-images.githubusercontent.com/47313851/172791558-cbbb0312-4558-4d32-83a8-ae5fb51b1114.png">
+<img width="617" alt="5" src="https://velog.velcdn.com/images/choi-jiwoo/post/0f8314b1-e2cc-4f9b-896c-4e282be7b930/image.png">
 
 계속
 
-<img width="618" alt="6" src="https://user-images.githubusercontent.com/47313851/172791694-0db8ac03-db51-465d-a571-2eeee8a5eca0.png">
+<img width="617" alt="6" src="https://velog.velcdn.com/images/choi-jiwoo/post/2efde509-1b14-4a6f-b3bc-c014d8795c7a/image.png">
 
 일련번호도 원하는걸로 설정.
 
-<img width="617" alt="7" src="https://user-images.githubusercontent.com/47313851/172791712-6eebeee6-ebe3-4570-9cac-e82882bc558b.png">
+<img width="617" alt="7" src="https://velog.velcdn.com/images/choi-jiwoo/post/89313fa3-bbeb-48f4-9b68-feeafe68f251/image.png">
 
 원하는 정보를 입력하고 이후부턴 모두 '계속'으로 진행하면 된다.
 
-<img width="617" alt="8" src="https://user-images.githubusercontent.com/47313851/172791722-20fd941b-323f-4baf-83eb-9307d0755a45.png">
+<img width="617" alt="8" src="https://velog.velcdn.com/images/choi-jiwoo/post/ef4535f2-2858-4c8b-b57b-cb5aa1200099/image.png">
 
 인증서 생성 완료!
 
@@ -55,9 +57,9 @@ Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프�
 
 각자 파이썬이 설치되어있는 경로를 찾으면 된다. 근데 맥은 기본적으로 파이썬이 내장되어있기도 하고 Homebrew나 pyenv로 설치하기도 하고 참 여러 경로를 통해 설치될 때가 있다... 그리고 파이썬 설치 경로를 찾는 법도 여러 방법이 있을것이다. 나는 방화벽 문제니깐 방화벽 설정에 들어가봤을 때 아래 사진처럼 python3.10이 딱 등록되어있길래 우클릭해서 'Finder에서 보기'로 찾았다.
 
-<img width="669" alt="10" src="https://user-images.githubusercontent.com/47313851/172795368-008ad2b9-daf3-434f-91fa-d53ecdcb813b.png">
+<img width="617" alt="10" src="https://velog.velcdn.com/images/choi-jiwoo/post/9d5b6424-ef55-4b75-b73c-eb9a1df861c3/image.png">
 
-<img width="669" alt="11" src="https://user-images.githubusercontent.com/47313851/172795394-1da23a20-1311-4270-956f-9cd17228a68d.png">
+<img width="617" alt="11" src="https://velog.velcdn.com/images/choi-jiwoo/post/9ee739c0-629c-4359-a8ea-ca6085154f2d/image.png">
 
 ### 코드 서명
 
@@ -71,7 +73,7 @@ Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프�
 
 `$ codesign -vvv /코드서명할프로그램경로`
 
-<img width="648" alt="13" src="https://user-images.githubusercontent.com/47313851/172795651-9d378b04-7998-443d-9731-873844028468.png">
+<img width="617" alt="13" src="https://velog.velcdn.com/images/choi-jiwoo/post/91a88323-5c2c-46b3-a317-4e5d3acce6ba/image.png">
 
 ### Result
 
@@ -84,6 +86,6 @@ Streamlit을 사용할 때 해결법은 아니지만 파이썬도 하나의 프�
 ### Reference
 
 - [Do you want the application to accept incoming network connections?](https://web.archive.org/web/20140228153242/http://silvanolte.com/blog/2011/01/18/do-you-want-the-application-to-accept-incoming-network-connections)
-- [\`Do you want the application "main" to accept incoming network connections?\` pop up while running Go applications](https://apple.stackexchange.com/questions/393715/do-you-want-the-application-main-to-accept-incoming-network-connections-pop)
+- ['Do you want the application "main" to accept incoming network connections?' pop up while running Go applications](https://apple.stackexchange.com/questions/393715/do-you-want-the-application-main-to-accept-incoming-network-connections-pop)
 - [코드 서명](https://developer.apple.com/kr/support/code-signing/)
 - [맥OS 앱 코드사인 및 공증하기](http://cwyang.github.io/2020/12/09/osx-codesign-notarization.html)
