@@ -5,7 +5,8 @@
 VS Code에서 python에 사용할 linter로 pylint를 설정 해주었는데 아래 사진과 같은 import error 가 발생했다. 
 
 
-![error message](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5dwk0furad3kxzwc8bp9.png)
+![1](https://velog.velcdn.com/images/choi-jiwoo/post/53801d00-e50e-4400-a874-ab55f21960ff/image.png)
+
 
 구글링을 해보니 pylint에 path와 관련된 문제였다. pylint를 가상환경에서 설치하였기 때문에 pylint가 다른 디렉터리에 있는 모듈을 인식할 수 없는것이었다.
 
@@ -25,16 +26,13 @@ pylint에 `init-hook`을 설정해주면 되는데 이게 뭘까 찾아보았다
 ]
 ```
 
+![2](https://velog.velcdn.com/images/choi-jiwoo/post/cbbe994a-874e-4ce1-9e8b-38b78dcff4ca/image.png)
 
-![setting json 1](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bwokfxveiakc45xknvuc.png)
-
-
-![setting json 2](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lsgzs3t7ltxp04gkwom7.png)
+![3](https://velog.velcdn.com/images/choi-jiwoo/post/82a517a7-6c72-43b6-9a16-236b9edb2b59/image.png)
 
 `append()` 안에 자신의 모듈이 있는 디렉터리를 적어주면 끝!
 
-
-![solved](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/97hg405sllrutaik6b34.png)
+![4](https://velog.velcdn.com/images/choi-jiwoo/post/4eca2a23-78d7-4267-8fe2-541e1ca2efd9/image.png)
 
 이제 import error가 보이지 않는다!
 
@@ -60,11 +58,11 @@ from 패키지 import 모듈
 
 ### Reference
 
-- https://www.python.org/dev/peps/pep-0328/
-- https://google.github.io/styleguide/pyguide.html#s2.2-imports
-- https://stackoverflow.com/questions/45448182/absolute-imports-in-python-not-working-relative-imports-work
+- [PEP 328 – Imports: Multi-Line and Absolute/Relative](https://www.python.org/dev/peps/pep-0328/)
+- [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html#s2.2-imports)
+- [Absolute imports in python not working, relative imports work](https://stackoverflow.com/questions/45448182/absolute-imports-in-python-not-working-relative-imports-work)
 
-- https://stackoverflow.com/questions/51095449/pylint-false-positive-e0401-import-errors-in-vscode-while-using-venv
-- https://www.getcodeflow.com/pylint-configuration.html
-- https://sam.hooke.me/note/2019/01/call-python-script-from-pylint-init-hook/
+- [pylint false positive E0401 import errors in vscode while using venv](https://stackoverflow.com/questions/51095449/pylint-false-positive-e0401-import-errors-in-vscode-while-using-venv)
+- [Pylint configuration](https://www.getcodeflow.com/pylint-configuration.html)
+- [Call Python script from pylint init-hook](https://sam.hooke.me/note/2019/01/call-python-script-from-pylint-init-hook/)
 
